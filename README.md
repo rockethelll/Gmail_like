@@ -1,6 +1,6 @@
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/rockethelll/Gmail_like)
-
 # Gmail_like
+
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/rockethelll/Gmail_like)
 
 ## Fonctionnement
 

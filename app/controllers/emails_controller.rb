@@ -1,12 +1,12 @@
 class EmailsController < ApplicationController
   def index
-    @emails = Email.order(id: :desc)
     # @emails = Email.all
+    @emails = Email.order(id: :desc)
     @email = Email.new
   end
 
   def create
-    @email = Email.create!(object: Faker::Lorem.sentence, body: Faker::Lorem.paragraph)
+    @email = Email.create!(object: Faker::Lorem.sentence, body: Faker::Lorem.paragraph, read: false)
     respond_to do |format|
       if @email.save
         format.html { redirect_to emails_path, notice: 'Email was successfully created' }
@@ -25,7 +25,6 @@ class EmailsController < ApplicationController
   def toggle
     @email = Email.find(params[:id])
     @email.update(read: params[:read])
-
     render json: { message: 'Success' }
   end
 end
