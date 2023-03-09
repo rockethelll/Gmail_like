@@ -1,0 +1,11 @@
+<div class='card my-3'>
+<%= form_with(model: email, class:" my-3") do |form| %>
+  <%= form.check_box :read, data: {id: email.id, action: "mails#toggle"}, class: "mr-2 align-middle rounded" %>
+  <%= form.label 'Lu' %>
+  <br>
+  <%= email.object %>
+  <br>
+  <%= email.body %>
+  <%= button_to "Delete", email_path(email), method: :delete, data: { "turbo-frame": "_top" }, class:'btn btn-success' %>
+<% end %>
+</div>

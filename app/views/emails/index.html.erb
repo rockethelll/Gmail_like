@@ -1,0 +1,4 @@
+<div class="text-center" data-controller="mails">
+    <%= render @emails %>
+    <%= button_to "Recevoir un mail", emails_path, data: {turbo_frame: 'post'}, class:'btn btn-primary' %>
+</div>
